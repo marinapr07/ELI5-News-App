@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>ELI5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="feed-view" id="feedView">
+
+    <div class="feed-header">
+      <div class="eli5-logo">ELI5</div>
+      <button class="cat-btn" id="catBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="15" y2="12"/>
+          <line x1="3" y1="18" x2="9" y2="18"/>
+        </svg>
+        Categories
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+      <div class="cat-dropdown" id="catDD"></div>
+    </div>
+
+    <div class="swipe-stage" id="swipeStage">
+      <div class="card-stack" id="cardStack">
+        <div class="loading-state" id="loadingState">
+          <div class="loading-spinner"></div>
+          <p>getting the news fr fr…</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="article-view" id="articleView"></div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
